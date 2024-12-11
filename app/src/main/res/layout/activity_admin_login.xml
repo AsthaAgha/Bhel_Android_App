@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/adminAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:text="BHEL Visualizer"
+        android:textColor="@color/navy_blue"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/adminLoginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin Login"
+        android:textSize="24sp"
+        android:textColor="@color/navy_blue"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/adminAppName"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/adminLoginEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/adminLoginTitle"
+        android:layout_marginTop="24dp" />
+
+    <EditText
+        android:id="@+id/adminLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_below="@id/adminLoginEmail"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/adminLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="24sp"
+        android:backgroundTint="@color/navy_blue"
+        android:layout_below="@id/adminLoginPassword"
+        android:layout_marginTop="24dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password? Change"
+        android:padding="8dp"
+        android:visibility="invisible"
+        android:textColor="@android:color/holo_blue_bright"
+        android:id="@+id/forgotPassButton"
+        android:layout_below="@+id/adminLoginButton"/>
+</RelativeLayout>

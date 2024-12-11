@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="navy_blue">#030333</color>
+    <color name="crud">#0D89F6</color>
+    <color name="background">#F4F9FF</color>
+    <color name="red">#FF0000</color>
+
+
+    <!-- Define your custom colors here -->
+    <color name="color1">#FF5252</color>
+    <color name="color2">#FF4081</color>
+    <color name="color3">#E040FB</color>
+    <color name="color4">#7C4DFF</color>
+    <color name="color5">#536DFE</color>
+    <color name="color6">#448AFF</color>
+    <color name="color7">#40C4FF</color>
+    <color name="color8">#18FFFF</color>
+    <color name="color9">#64FFDA</color>
+    <color name="color10">#69F0AE</color>
+    <color name="color11">#B2FF59</color>
+    <color name="color12">#EEFF41</color>
+    <color name="color13">#FFFF00</color>
+    <color name="color14">#FFD740</color>
+    <color name="color15">#FFAB40</color>
+    <color name="color16">#FF6E40</color>
+    <color name="color17">#FF4081</color>
+    <color name="color18">#F06292</color>
+    <color name="color19">#BA68C8</color>
+    <color name="color20">#9575CD</color>
+
+    <array name="custom_pie_chart_colors">
+        <item>@color/color1</item>
+        <item>@color/color2</item>
+        <item>@color/color3</item>
+        <item>@color/color4</item>
+        <item>@color/color5</item>
+        <item>@color/color6</item>
+        <item>@color/color7</item>
+        <item>@color/color8</item>
+        <item>@color/color9</item>
+        <item>@color/color10</item>
+        <item>@color/color11</item>
+        <item>@color/color12</item>
+        <item>@color/color13</item>
+        <item>@color/color14</item>
+        <item>@color/color15</item>
+        <item>@color/color16</item>
+        <item>@color/color17</item>
+        <item>@color/color18</item>
+        <item>@color/color19</item>
+        <item>@color/color20</item>
+    </array>
+</resources>

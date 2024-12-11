@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "308722650388",
+    "firebase_url": "https://bhel-visualizer-default-rtdb.firebaseio.com",
+    "project_id": "bhel-visualizer",
+    "storage_bucket": "bhel-visualizer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308722650388:android:ebdf9f9676343195d00601",
+        "android_client_info": {
+          "package_name": "com.example.bhelvisualizer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_xgXRBd7tMerCFkoD3Iw-Oy4pny-EDaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

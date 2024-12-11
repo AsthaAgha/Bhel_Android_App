@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/navy_blue">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="8dp"/>
+
+    <Button
+        android:id="@+id/reportOptionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/navy_blue"
+        android:backgroundTint="@color/white"
+        android:text="Report"/>
+
+    <Button
+        android:id="@+id/fileOptionButton"
+        android:layout_width="match_parent"
+        android:textColor="@color/navy_blue"
+        android:backgroundTint="@color/white"
+        android:layout_height="wrap_content"
+        android:text="File"/>
+</LinearLayout>

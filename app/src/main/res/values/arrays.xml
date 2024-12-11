@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="chart_types">
+        <item>Bar Chart</item>
+        <item>Pie Chart</item>
+        <item>Line Chart</item>
+        <item>Bubble Chart</item>
+        <item>Horizontal Bar Chart</item>
+        <item>Scatter Chart</item>
+    </string-array>
+</resources>

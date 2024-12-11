@@ -1,0 +1,259 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/navy_blue"
+        android:elevation="4dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bhel_logo"
+            android:layout_gravity="left"/>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="BHEL Visualizer"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/logoImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <!-- CardView to display the title of the chart -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/chartTitleCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/chartTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:text="Chart Title"
+            android:textColor="@color/navy_blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Center horizontal and vertical guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- BarChart -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuideline"
+        app:layout_constraintTop_toTopOf="@id/horizontalGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+        app:layout_constraintDimensionRatio="1:1" />
+
+    <!-- PieChart -->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuideline"
+        app:layout_constraintTop_toTopOf="@id/horizontalGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+        app:layout_constraintDimensionRatio="1:1" />
+
+    <!-- LineChart -->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuideline"
+        app:layout_constraintTop_toTopOf="@id/horizontalGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+        app:layout_constraintDimensionRatio="1:1" />
+
+    <!-- BubbleChart -->
+    <com.github.mikephil.charting.charts.BubbleChart
+        android:id="@+id/bubbleChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuideline"
+        app:layout_constraintTop_toTopOf="@id/horizontalGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+        app:layout_constraintDimensionRatio="1:1" />
+
+    <!-- HorizontalBarChart -->
+    <com.github.mikephil.charting.charts.HorizontalBarChart
+        android:id="@+id/horizontalBarChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuideline"
+        app:layout_constraintTop_toTopOf="@id/horizontalGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+        app:layout_constraintDimensionRatio="1:1" />
+
+    <!-- ScatterChart -->
+    <com.github.mikephil.charting.charts.ScatterChart
+        android:id="@+id/scatterChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuideline"
+        app:layout_constraintTop_toTopOf="@id/horizontalGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+        app:layout_constraintDimensionRatio="1:1" />
+
+    <!-- X-Axis Label -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewReportCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/viewReportTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:padding="16dp"
+            android:text="View Report"
+            android:textColor="@color/navy_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/xAxisArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/viewReportCardView"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuideline"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/barChart" />
+
+    <TextView
+        android:id="@+id/xAxisLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="X-Axis"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuideline"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/xAxisArrow" />
+    <!-- Y-Axis Label and Arrow -->
+    <ImageView
+        android:id="@+id/yAxisArrow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_arrow_upward"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/yAxisLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Y-Axis"
+        android:rotation="-90"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/yAxisArrow"
+        android:padding="30dp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="4dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/spinnerCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chartTitleCardView">
+
+        <Spinner
+            android:id="@+id/chartTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/chart_types"
+            android:gravity="center_vertical"
+            android:spinnerMode="dropdown" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

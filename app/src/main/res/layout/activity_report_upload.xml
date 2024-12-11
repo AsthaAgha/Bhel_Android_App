@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/navy_blue"
+        android:elevation="4dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <!-- Logo ImageView -->
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bhel_logo"
+            android:layout_gravity="left" />
+
+        <!-- Toolbar Title -->
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="BHEL Visualizer"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/logoImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Main Content Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:indeterminate="true"
+            android:theme="@style/Widget.AppCompat.ProgressBar"
+            android:text="Uploading... Please Wait"/>
+
+        <!-- Report Details Layout -->
+        <LinearLayout
+            android:layout_width="351dp"
+            android:layout_gravity="center"
+            android:layout_height="407dp"
+            android:layout_below="@id/toolbar"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="130dp"
+            android:background="@drawable/round_white_background"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+        <!-- Report Name Input -->
+            <EditText
+                android:id="@+id/reportNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Report Name"
+                android:paddingVertical="14dp"
+                android:textColorHint="@color/navy_blue" />
+
+            <!-- Number of Entries Input -->
+            <EditText
+                android:id="@+id/numberOfEntriesInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of Entries"
+                android:inputType="number"
+                android:paddingVertical="14dp"
+                android:textColorHint="@color/navy_blue" />
+
+            <!-- Priority Spinner -->
+            <Spinner
+                android:id="@+id/prioritySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/priority_array"
+                android:paddingVertical="14dp" />
+
+            <!-- Upload CSV Button -->
+            <Button
+                android:id="@+id/uploadCSVButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/navy_blue"
+                android:text="Upload CSV" />
+
+            <!-- Description Input -->
+            <EditText
+                android:id="@+id/descriptionInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Table Description (max 50 words)"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:paddingVertical="14dp"
+                android:textColorHint="@color/navy_blue" />
+
+            <!-- Chart Type Spinner -->
+            <Spinner
+                android:id="@+id/chartTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:entries="@array/chart_types" />
+
+            <!-- Submit Details Button -->
+            <Button
+                android:id="@+id/submitDetailsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/navy_blue"
+                android:text="Submit"
+                android:visibility="invisible" />
+
+            <!-- Please Upload TextView -->
+            <TextView
+                android:id="@+id/pleaseUploadTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Please Upload a Report (.csv type)"
+                android:textColor="@android:color/holo_blue_dark" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
